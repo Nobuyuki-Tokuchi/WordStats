@@ -13,14 +13,14 @@ namespace WordStatistics
         public string Name { get; }
         public string? Description { get; }
 
-        private DefaultCategorizerSettings _settings;
+        private CategorizerSetting _settings;
         private readonly JsonSerializerOptions _options;
 
         
         public ConcatCharacterCategorizer()
         {
             Name = "Concat Character Categorizer";
-            _settings = new DefaultCategorizerSettings();
+            _settings = new CategorizerSetting();
 
             _options = new JsonSerializerOptions
             {
@@ -73,9 +73,9 @@ namespace WordStatistics
             return list;
         }
 
-        public void ReadSettingFile(string path)
+        public void SetSetting(CategorizerSetting settings)
         {
-            _settings = JsonSerializer.Deserialize<DefaultCategorizerSettings>(File.ReadAllText(path), _options);
+            _settings = settings;
         }
     }
 }

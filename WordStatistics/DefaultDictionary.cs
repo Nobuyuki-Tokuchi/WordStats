@@ -8,16 +8,25 @@ namespace WordStatistics
 {
     public class DefaultDictionary : IWordDictionary
     {
-        public IEnumerable<string> Words { get; set; }
+        private readonly List<string> _words;
+
+        public IEnumerable<string> Words
+        {
+            get
+            {
+                return _words;
+            }
+        }
 
         public DefaultDictionary()
         {
-            Words = new List<string>();
+            _words = new List<string>();
         }
 
         public void Read(string data)
         {
-            Words = new List<string>(data.Split(SPLIT_STRING_LIST, StringSplitOptions.RemoveEmptyEntries));
+            _words.Clear();
+            _words.AddRange(data.Split(SPLIT_STRING_LIST, StringSplitOptions.RemoveEmptyEntries));
         }
 
         public void ReadFile(string path)

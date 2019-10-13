@@ -132,9 +132,9 @@ namespace WordStats
                 {
                     var instance = CreateInstance<IWordCategorizer>(info);
 
-                    if (!(info.SettingPath is null))
+                    if (!(info.Setting is null))
                     {
-                        instance.ReadSettingFile(info.SettingPath);
+                        instance.SetSetting(info.Setting);
                     }
 
                     list.Add(instance);

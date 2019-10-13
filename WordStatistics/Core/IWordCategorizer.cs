@@ -10,6 +10,6 @@ namespace WordStatistics.Core
         public string? Description { get; }
 
         public IList<WordResult> Execute(IWordDictionary dictionary);
-        public void ReadSettingFile(string path);
+        public void SetSetting(CategorizerSetting settings);
     }
 }

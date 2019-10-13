@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WordStatistics.Core;
 
 namespace WordStats
 {
@@ -16,6 +17,6 @@ namespace WordStats
     {
         public string? DllPath { get; set; }
         public string? ClassName { get; set; }
-        public string? SettingPath { get; set; }
+        public CategorizerSetting? Setting { get; set; }
     }
 }

@@ -5,12 +5,11 @@ namespace WordStatistics.Pdic
 {
     public class PdicDictionary
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public IList<PdicRecord> Records { get; set; }
 
         public PdicDictionary()
         {
-            Name = "";
             Records = new List<PdicRecord>();
         }
     }

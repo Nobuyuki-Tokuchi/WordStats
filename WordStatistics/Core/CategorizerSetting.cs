@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WordStatistics
+namespace WordStatistics.Core
 {
-    internal class DefaultCategorizerSettings
+    public class CategorizerSetting
     {
         public string? IncludeSpace { get; set; }
         public int? Length { get; set; }
