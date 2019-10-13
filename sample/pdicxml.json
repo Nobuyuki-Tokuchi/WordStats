@@ -1,0 +1,24 @@
+{
+    "dictionary": {
+        "dllPath": "WordStatistics.Pdic.dll",
+        "className": "WordStatistics.Pdic.PdicXmlWordDictionary"
+    },
+    "categorizers": [
+        {
+            "dllPath": "WordStatistics.dll",
+            "className": "WordStatistics.LengthCategorizer",
+            "settingPath": "default_categorizer_setting.json"
+        },
+        {
+            "dllPath": "WordStatistics.dll",
+            "className": "WordStatistics.UsingCharactersCategorizer",
+            "settingPath": "default_categorizer_setting.json"
+        },
+        {
+            "dllPath": "WordStatistics.dll",
+            "className": "WordStatistics.ConcatCharacterCategorizer",
+            "settingPath": "default_categorizer_setting.json"
+        }
+    ],
+    "order": "value_desc"
+}
