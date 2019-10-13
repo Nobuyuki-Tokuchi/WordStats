@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WordStatistics.PdicXml
+namespace WordStatistics.Pdic
 {
     public class PdicDictionary
     {

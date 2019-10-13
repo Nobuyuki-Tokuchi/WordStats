@@ -6,7 +6,7 @@ using WordStatistics.Core;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace WordStatistics.PdicXml
+namespace WordStatistics.Pdic
 {
     public class PdicXmlWordDictionary : IWordDictionary
     {

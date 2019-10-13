@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WordStatistics.OtmJson
+namespace WordStatistics.Otm
 {
     public class OtmDictionary
     {

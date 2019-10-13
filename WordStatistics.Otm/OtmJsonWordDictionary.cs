@@ -6,7 +6,7 @@ using System.Text.Json;
 using WordStatistics.Core;
 using System.Linq;
 
-namespace WordStatistics.OtmJson
+namespace WordStatistics.Otm
 {
     public class OtmJsonWordDictionary : IWordDictionary
     {
