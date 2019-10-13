@@ -6,7 +6,6 @@ using System.Reflection;
 using System.Text.Json;
 using WordStatistics;
 using WordStatistics.Core;
-using WordStatistics.OtmJson;
 
 namespace WordStats
 {
@@ -157,12 +156,14 @@ namespace WordStats
                 statistics = CreateInstance<IWordStatistics>(statisticsInfo);
             }
 
-            if (order is null || order.ToLower() != "value")
+            if (Enum.TryParse(order, true, out SortOrder sortOrder))
             {
-                order = "key";
+                statistics.Order = sortOrder;
             }
-
-            statistics.Order = Enum.Parse<SortOrder>(order, true);
+            else
+            {
+                statistics.Order = SortOrder.KEY_ASC;
+            }
             return statistics;
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace WordStatistics.Core
@@ -9,6 +10,10 @@ namespace WordStatistics.Core
         IEnumerable<string> Words { get; }
 
         void Read(string data);
-        void ReadFile(string path);
+
+        public void ReadFile(string path)
+        {
+            Read(File.ReadAllText(path));
+        }
     }
 }

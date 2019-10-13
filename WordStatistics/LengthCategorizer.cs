@@ -46,7 +46,7 @@ namespace WordStatistics
 
             foreach (var word in dictionary.Words)
             {
-                var lengthStr = word.Length.ToString();
+                var lengthStr = word.Length.ToString("0000");
 
                 if (_settings.IncludeSpace != "no")
                 {

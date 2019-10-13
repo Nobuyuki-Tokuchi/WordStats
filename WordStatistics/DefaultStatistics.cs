@@ -36,11 +36,17 @@ namespace WordStatistics
                     var values = result.Values.ToList();
                     switch (Order)
                     {
-                        case SortOrder.KEY:
+                        case SortOrder.KEY_ASC:
                             values.Sort((x, y) => x.Key.CompareTo(y.Key));
                             break;
-                        case SortOrder.VALUE:
+                        case SortOrder.VALUE_ASC:
                             values.Sort((x, y) => x.Value.CompareTo(y.Value));
+                            break;
+                        case SortOrder.KEY_DESC:
+                            values.Sort((x, y) => y.Key.CompareTo(x.Key));
+                            break;
+                        case SortOrder.VALUE_DESC:
+                            values.Sort((x, y) => y.Value.CompareTo(x.Value));
                             break;
                         default:
                             values.Sort((x, y) => x.Key.CompareTo(y.Key));

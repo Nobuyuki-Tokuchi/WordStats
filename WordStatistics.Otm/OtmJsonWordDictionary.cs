@@ -45,10 +45,5 @@ namespace WordStatistics.OtmJson
         {
             _otm = JsonSerializer.Deserialize<OtmDictionary>(data, _options);
         }
-
-        public void ReadFile(string path)
-        {
-            Read(File.ReadAllText(path));
-        }
     }
 }

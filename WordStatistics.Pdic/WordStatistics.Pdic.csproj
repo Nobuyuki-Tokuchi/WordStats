@@ -1,15 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <Authors>Nobuyuki Tokuchi</Authors>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WordStatistics.Otm\WordStatistics.Otm.csproj" />
-    <ProjectReference Include="..\WordStatistics.Pdic\WordStatistics.Pdic.csproj" />
     <ProjectReference Include="..\WordStatistics\WordStatistics.csproj" />
   </ItemGroup>
 
